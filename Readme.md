@@ -26,16 +26,16 @@ This diagram serves as a blueprint and can be used as a reference for:
 
 Feel free to fork this project, submit pull requests, or open issues if you have suggestions for improving the database design or adding new entities.
 
-# 2. 🏋️ Fitness Management System – ER Diagram
+# 2. Fitness Management System – ER Diagram
 
-## 📌 Overview
+##  Overview
 This project represents the **database design (ER Diagram)** for a fitness platform where trainers provide plans, clients subscribe to them, attend sessions, and track their progress over time.
 
 The system supports real-world features like subscriptions, payments, workout sessions, and fitness tracking.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 - Manage users (trainers & clients)
 - Allow trainers to create fitness plans
 - Enable clients to subscribe to plans
@@ -44,64 +44,47 @@ The system supports real-world features like subscriptions, payments, workout se
 
 ---
 
-## 🧱 Entities Included
+##  Entities Included
 
-### 👤 Users
+###  Users
 Stores common user information for both trainers and clients.
 
-### 🧑‍🏫 Trainers
+###  Trainers
 Contains trainer-specific details like specialization and experience.
 
-### 🧑 Clients
+###  Clients
 Stores client-specific data like fitness goals and activity level.
 
-### 📋 Plans
+###  Plans
 Created by trainers, includes workout/diet plans.
 
-### 🔁 Client Subscriptions
+###  Client Subscriptions
 Links clients to plans with duration and status.
 
-### 💳 Payments
+### Payments
 Handles payment records for subscriptions.
 
-### 📅 Sessions
+###  Sessions
 Tracks scheduled training sessions.
 
-### 📍 Check-ins
+###  Check-ins
 Logs client check-ins during training.
 
-### 📈 Progress Logs
+###  Progress Logs
 Tracks body metrics like weight, body fat, etc.
 
-### 📝 Trainer Feedback
+### Trainer Feedback
 Stores trainer feedback for each check-in.
 
 ---
 
-## 🔗 Relationships
-- One user can be a trainer or client  
-- One trainer can create multiple plans  
-- One client can subscribe to multiple plans  
-- One subscription is linked to payments  
-- One subscription can have multiple sessions  
-- One session leads to check-ins  
-- One check-in has progress logs and feedback  
-
----
-
-## 🧠 Design Highlights
+##  Design Highlights
 - Normalized database design (no redundancy)
 - Clear separation of roles (trainer vs client)
 - Scalable structure for real-world usage
 - Tracks complete user journey:
   Plan → Subscription → Payment → Session → Progress
 
----
-
-## 🛠 Tools Used
-- Eraser.io (for ER Diagram)
-
----
 
 ## 📷 Diagram
 You can view the ER diagram directly on GitHub by clicking the image file in the repository or by using the link below:
