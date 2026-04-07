@@ -105,7 +105,7 @@ Stores trainer feedback for each check-in.
 
 ## 📷 Diagram
 You can view the ER diagram directly on GitHub by clicking on the image file in the repository or by following this link:
-[View the ER Diagram](./Coaching)
+[View the ER Diagram](./https://github.com/Dhirenderchoudhary/Instagram-Thrift-Creator-Store-ER-Diagram/blob/main/Fitness%20Influencer%20Coaching%20Platform.png)
 
 
 ---
