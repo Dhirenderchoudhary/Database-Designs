@@ -86,10 +86,71 @@ Stores trainer feedback for each check-in.
   Plan → Subscription → Payment → Session → Progress
 
 
-## 📷 Diagram
+##  Diagram
 You can view the ER diagram directly on GitHub by clicking the image file in the repository or by using the link below:
 
 [View the ER Diagram](./Fitness%20Influencer%20Coaching%20Platform.png)
 
 ---
+
+# 3. Clinic Management System – ER Diagram
+
+## Overview
+
+This project represents the database design (ER Diagram) for a clinic platform where patients can book appointments with doctors, attend consultations, undergo diagnostic tests, and receive reports.
+
+The system supports real-world clinic operations like appointment scheduling, doctor consultations, diagnostic testing, report generation, and payments.
+
+## Objectives
+Manage patients and doctors
+Organize appointments efficiently
+Track consultations (actual visits)
+Allow doctors to prescribe diagnostic tests
+Generate and store test reports
+Handle payments for appointments
+Maintain complete patient visit history
+Entities Included
+Patients
+
+Stores patient details such as name, contact information, and date of birth.
+
+## Doctors
+
+Contains doctor information along with their assigned specialty.
+
+## Specialties
+
+Defines different medical specialties (e.g., cardiology, dermatology).
+
+## Appointments
+
+Represents booking between a patient and a doctor at a scheduled time.
+Includes status like booked, cancelled, completed, or no-show.
+
+## Consultations
+
+Represents the actual visit after an appointment.
+Not all appointments result in consultations (e.g., no-show cases).
+
+## Tests (Diagnostics)
+
+Contains available diagnostic tests with description and pricing.
+
+## Prescribed Tests
+
+Links consultations with tests prescribed by doctors.
+Tracks the status of each test.
+
+## Reports
+
+Stores diagnostic reports generated after tests are completed.
+Each report corresponds to a prescribed test.
+
+## Payments
+
+Handles payment transactions related to appointments.
+Includes payment method and status.
+
+
+Patient → Appointment → Consultation → Prescribed Tests → Reports → Payment
 
