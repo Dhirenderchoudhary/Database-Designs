@@ -1,3 +1,4 @@
+
 # 1. Instagram Thrift Creator Store ER Diagram
 
 This repository contains the Entity-Relationship (ER) diagram for an Instagram-based Thrift Creator Store. 
@@ -153,4 +154,73 @@ Includes payment method and status.
 
 
 Patient → Appointment → Consultation → Prescribed Tests → Reports → Payment
+
+# 3. Comic-Con Parking Management System – ER Diagram
+
+##  Overview
+This project represents the **database design (ER Diagram)** for a large-scale Comic-Con event parking system where thousands of vehicles enter and exit across multiple days.
+
+The system manages vehicle entry, parking allocation, reserved zones, ticket generation, session tracking, and payment processing in a structured and scalable way.
+
+---
+
+##  Objectives
+- Track vehicles entering the venue  
+- Manage different vehicle categories (bike, car, SUV, EV, etc.)  
+- Allocate parking spots efficiently  
+- Support reserved parking (VIP, staff, exhibitors, cosplayers, EV charging)  
+- Record entry and exit timestamps  
+- Generate parking tickets  
+- Track parking sessions  
+- Handle payment and billing  
+- Monitor parking availability across zones and floors  
+
+---
+
+##  Entities Included
+
+###  Users
+Stores basic user/owner details of vehicles.
+
+### Vehicles
+Represents vehicles entering the parking facility.
+
+###  Vehicle Categories
+Defines types of vehicles (bike, car, SUV, EV, etc.).
+
+###  Parking Floors
+Represents different levels in the parking structure.
+
+###  Parking Categories
+Defines reserved types of parking (VIP, staff, exhibitor, EV charging, etc.) along with pricing.
+
+###  Parking Zones
+Subdivisions within floors, mapped to parking categories.
+
+###  Parking Spots
+Individual parking spots within zones.
+
+###  Parking Sessions
+Tracks entry and exit of vehicles. Each session represents one visit.
+
+###  Tickets
+Generated when a vehicle enters the parking facility.
+
+###  Payments
+Stores payment details for each parking session.
+
+---
+
+##  Relationships
+- One user can own multiple vehicles  
+- One vehicle belongs to one category  
+- One floor contains multiple parking zones  
+- One zone belongs to a parking category  
+- One zone contains multiple parking spots  
+- One vehicle can have multiple parking sessions  
+- One parking spot can be reused across multiple sessions  
+- One session generates one ticket  
+- One session is linked to a payment  
+
+
 
