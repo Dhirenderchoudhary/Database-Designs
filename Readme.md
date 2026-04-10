@@ -155,7 +155,7 @@ Includes payment method and status.
 
 Patient → Appointment → Consultation → Prescribed Tests → Reports → Payment
 
-# 3. Comic-Con Parking Management System – ER Diagram
+# 4. Comic-Con Parking Management System – ER Diagram
 
 ##  Overview
 This project represents the **database design (ER Diagram)** for a large-scale Comic-Con event parking system where thousands of vehicles enter and exit across multiple days.
@@ -220,7 +220,108 @@ Stores payment details for each parking session.
 - One vehicle can have multiple parking sessions  
 - One parking spot can be reused across multiple sessions  
 - One session generates one ticket  
-- One session is linked to a payment  
+- One session is linked to a payment
+
+# 4. Comic-Con Parking Management System 
+
+##  Overview
+This project represents the **database design (ER Diagram)** for a large-scale **event parking system** used in venues like Comic-Con India.
+
+The system is designed to manage **high-volume, multi-day parking operations** involving different types of vehicles, reserved parking categories, and real-time parking allocation.
+
+It supports structured parking with **zones, levels, and categorized spots**, along with tracking **sessions, tickets, and payments**.
+
+---
+
+##  Objectives
+- Manage different types of vehicles (bike, car, SUV, EV, etc.)
+- Organize parking into zones and levels
+- Allocate parking spots based on availability and category
+- Track vehicle entry and exit (sessions)
+- Generate parking tickets
+- Handle payments and pricing
+- Support reserved categories (VIP, staff, exhibitors, etc.)
+- Maintain real-time parking availability
+
+---
+
+## Entities Included
+
+###  Visitors
+Stores visitor details such as name, email, and role.
+Roles include: `cosplayer`, `exhibitor`, `creator`, `staff`, `VIP`, `general`.
+
+---
+
+###  Vehicles
+Stores vehicle information and links to:
+- Vehicle type (bike, car, etc.)
+- Owner (visitor)
+
+---
+
+###  Vehicle Types
+Defines categories of vehicles.
+
+---
+
+###  Levels
+Represents different parking levels (floors).
+
+---
+
+###  Zones
+Each level contains multiple zones for better organization.
+
+---
+
+###  Parking Spots
+Represents individual parking slots.
+Tracks:
+- Zone
+- Category
+- Availability status
+
+---
+
+###  Spot Categories
+Defines types of parking spots (e.g., general, VIP, EV charging).
+
+---
+
+###  Spot-Vehicle Mapping
+Handles compatibility between vehicle types and spot categories.
+
+---
+
+###  Parking Sessions
+Tracks actual parking activity:
+- Entry time
+- Exit time
+- Assigned spot
+- Status (active/completed)
+
+---
+
+### Tickets
+Generated when a vehicle enters the parking facility.
+Linked to parking sessions.
+
+---
+
+### Payments
+Handles payment transactions for each parking session:
+- Amount
+- Payment method
+- Payment status
+
+---
+
+###  Pricing
+Defines parking rates based on vehicle type.
+
+
+
 
 
 
